@@ -156,11 +156,15 @@ nav{
 }
 
 .logo{
-	height:380px;
 	margin:0 auto;
-	text-align:center;
+	text-align:left;
 	padding:100px 0 0;
 	max-width:1050px;
+	
+	> div{
+		display:inline-block;
+		vertical-align:middle;
+	}
 	
 	.logo_image{
 		width:120px;
@@ -210,48 +214,70 @@ nav{
 			vertical-align: middle;
 		}
 	}
-	.app{
-		height:100%;
-		overflow:auto;
-	}
-	.app .demos > div{
-		width:33%;
-	}
-	.swiper-slide{
-		height:415px;
+	
+	.product_info{
+		width:440px;
+		margin-top:40px;
+		text-align:center;
 	}
 	
-	.swiper-pagination-bullet{
-		border-radius:0;
-		padding:5px;
+	.demos{
+		margin:0 auto;
 		display:inline-block;
-		opacity:1;
-		background:none;
-		border:2px solid rgba(0,0,0,0.2);
+		position:relative;
+		width:400px;
+		height:430px;
+		margin-left:130px;
 		
-		&:first-child{
-			display:none;
+		h2{
+			cursor:pointer;
+			user-select:none;
 		}
 		
-		&:last-child{
-			width:auto;
-			height:auto;
-			&:before{
-				content:"DEMO";
-			}
+		.demo{
+			width:250px;
+			height:420px;
+			overflow:hidden;
+			background:#fff;
+			border-radius:5px;
+			
+			position:absolute;
+			-webkit-transform-origin: 50% 80%;
+		    -moz-transform-origin: 50% 80%;
+		    -o-transform-origin: 80px 80%;
+		    -ms-transform-origin: 50% 80%;
+		    transform-origin: 50% 80%;
+		    box-shadow: -1px -1px 3px rgba(0,0,0,0.2),
+		    			12px 12px 20px rgba(0,0,0,0.4),
+		    			0px 0px 1px rgba(0, 0, 0, 0.1);
+		    			
+		    			
+			transform: rotate(0);
+			transition: all 700ms ease;
 		}
-		
-		&.swiper-pagination-bullet-active{
-			color:#fff;
-			background: #007aff;
+		#active{
+	    	z-index:2;
+	    }		
+		.demo1{
+			transform: rotate(-10deg);
+			left:-100px;
+		}
+		.demo2{
+			left:30px;
+		}
+		.demo3{
+			transform: rotate(10deg);
+			left:160px;
 		}
 	}
+	
 }
 
 footer{
 	padding:20px 0 20px;
 	border-top:1px solid #ddd;
-	margin-top:20px;
+	margin-top:80px;
+	text-align:center;
 }
 
 .footer{
@@ -263,6 +289,8 @@ footer{
 		margin:0;
 		margin-bottom:5px;
 		font-size:20px;
+		display:inline-block;
+		
 		&:after{
 			content:"";
 			display:block;

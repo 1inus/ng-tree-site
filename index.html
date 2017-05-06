@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"/>
-<title>Ng Tree 树形组件--灵活，简单，丰富，优美</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta itemprop="image" content="http://ng2-layer.wemakers.net/image/logo.png" />
-<meta itemprop="name" content="Ng Tree 树形组件--灵活，简单，优美"/>
-<meta name="Keywords" content="Angular2,Angular4, tree, component,angular,angular2,树形控件,树形插件"/>
-<meta name="Description" itemprop="description" content="Ng Tree是一款基于angular4开发的树形组件，致力于实现易用，美观，丰富的树状展示效果，Ng Tree 符合angular4 组件化编程的模式，帮开发者简化了组件实现的过程，实现更灵活，调用更直观" />
+	<meta charset="utf-8"/>
+	<title>Ng Tree 树形组件--灵活，简单，丰富，优美</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta itemprop="image" content="http://ng2-layer.wemakers.net/image/logo.png" />
+	<meta itemprop="name" content="Ng Tree 树形组件--灵活，简单，优美"/>
+	<meta name="Keywords" content="Angular2,Angular4, tree, component,angular,angular2,树形控件,树形插件"/>
+	<meta name="Description" itemprop="description" content="Ng Tree是一款基于angular4开发的树形组件，致力于实现易用，美观，丰富的树状展示效果，Ng Tree 符合angular4 组件化编程的模式，帮开发者简化了组件实现的过程，实现更灵活，调用更直观" />
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-
 	<link rel="stylesheet" href="css/index.css" />
-	<link rel="stylesheet" href="libs/swiper/dist/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="libs/shanxing/css/style5.css" />
+	
+	<link rel="stylesheet" href="https://cdn.wemakers.net/online_lib/87/style.css" />
+	<link rel="stylesheet" href="demo/icomoon/style.css">
+	<link rel="stylesheet" href="demo/style/tree.css">
+	<link rel="stylesheet" href="demo/demo.css">
 </head>
 <body>
 <header>
 <nav>
 	<a href="index.html" class="index"><img src="image/logo.png" alt="" /></a>
 	<a href="doc.html" class="icon-document">DOCUMENT</a>
-	<div href="https://github.com/1inus/angular2-layer" class="icon-downLoad"><span>DOWNLOAD</span>
+	<div class="icon-downLoad"><span>DOWNLOAD</span>
 		<div class="download">
-			<a target="_blank" class="github" href="https://github.com/1inus/angular2-layer">github</a>
-			<a target="_blank" class="npm" href="https://www.npmjs.com/package/angular2-layer">npm</a>
+			<a target="_blank" class="github" href="https://github.com/1inus/ng.tree">github</a>
+			<a target="_blank" class="npm" href="https://www.npmjs.com/package/ng.tree">npm</a>
 		</div>
 	</div>
 	<a href="demo.html" class="icon-document">DEMO</a>
 </nav>
 </header>
-
-<div class="logo swiper-container">
+<div class="logo">
+	<div class="product_info">
 		<img class="logo_image" src="image/logo.png" alt="logo" />
 		<h1 classs="logo_name">Ng&nbsp;&nbsp;Tree</h1>
 		<p>Angular 树形组件，灵活，简单，丰富，优美</p>
 		<div class="git">
-			<a class="github-button" href="https://github.com/1inus/angular2-layer" data-icon="octicon-star" data-style="mega" data-count-href="/1inus/angular2-layer/stargazers" data-count-api="/repos/1inus/angular2-layer#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star 1inus/angular2-layer on GitHub">Star</a>
-			<a class="github-button" href="https://github.com/1inus/angular2-layer/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/1inus/angular2-layer/network" data-count-api="/repos/1inus/angular2-layer#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork 1inus/angular2-layer on GitHub">Fork</a>
-			<a class="github-button" href="https://github.com/1inus/angular2-layer/subscription" data-icon="octicon-eye" data-style="mega" data-count-href="/1inus/angular2-layer/watchers" data-count-api="/repos/1inus/angular2-layer#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch 1inus/angular2-layer on GitHub">Watch</a>
-			<a class="github-button" href="https://github.com/1inus/angular2-layer/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download 1inus/angular2-layer on GitHub">Download</a>
+			<a class="github-button" href="https://github.com/1inus/ng.tree" data-icon="octicon-star" data-style="mega" data-count-href="/1inus/ng.tree/stargazers" data-count-api="/repos/1inus/ng.tree#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star 1inus/ng.tree on GitHub">Star</a>
+			<a class="github-button" href="https://github.com/1inus/ng.tree/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/1inus/ng.tree/network" data-count-api="/repos/1inus/ng.tree#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork 1inus/ng.tree on GitHub">Fork</a>
+			<a class="github-button" href="https://github.com/1inus/ng.tree/subscription" data-icon="octicon-eye" data-style="mega" data-count-href="/1inus/ng.tree/watchers" data-count-api="/repos/1inus/ng.tree#subscribers_count" data-count-aria-label="# watchers on GitHub" aria-label="Watch 1inus/ng.tree on GitHub">Watch</a>
+			<a class="github-button" href="https://github.com/1inus/ng.tree/archive/master.zip" data-icon="octicon-cloud-download" data-style="mega" aria-label="Download 1inus/ng.tree on GitHub">Download</a>
 		</div>
 		<div class="browser_support">
 			<img src="image/chrome.png" alt="" />
@@ -46,6 +50,7 @@
 			<img src="image/ie.png" alt="" />
 		</div>
 	</div>
+	<div class="demos" onclick="active(event);"></div>
 </div>
 <footer>
 	<div class="footer">
@@ -58,6 +63,18 @@
 		</div>
 	</div>
 </footer>
+<script src="demo/main.js"></script>
 <script async defer src="libs/git/buttons.js"></script>
+<script>
+	function active(e){
+		var target = e.target;
+		if(target.tagName=="H2"){
+			if(document.querySelector("#active")){
+				document.querySelector("#active").id = null;
+			}
+			target.parentNode.id = "active";
+		}
+	}
+</script>
 </body>
 </html>

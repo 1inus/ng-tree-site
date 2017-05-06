@@ -13,6 +13,7 @@
     "core-js": "^2.4.1",
     "gulp-file-include": "^1.1.0",
     "gulp-html-minify": "0.0.14",
+    "gulp-less": "^3.3.0",
     "reflect-metadata": "^0.1.8",
     "rxjs": "^5.0.1",
     "zone.js": "^0.7.4"

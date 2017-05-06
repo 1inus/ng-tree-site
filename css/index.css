@@ -57,7 +57,7 @@ button {
   background: none;
   border-style: solid;
   border-width: 1px;
-  background: linear-gradient(#fafafa, #f2f2f2);
+  background: linear-gradient(#FAFAFA, #F2F2F2);
   outline: none;
 }
 button:hover {
@@ -156,11 +156,14 @@ nav img {
   height: 40px;
 }
 .logo {
-  height: 380px;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   padding: 100px 0 0;
   max-width: 1050px;
+}
+.logo > div {
+  display: inline-block;
+  vertical-align: middle;
 }
 .logo .logo_image {
   width: 120px;
@@ -172,7 +175,7 @@ nav img {
   line-height: 1em;
   margin: 20px auto;
   color: #000;
-  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 10px 6px rgba(0, 0, 0, 0.2), 0 20px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 10px 6px rgba(0, 0, 0, 0.2), 0 20px 10px rgba(0, 0, 0, 0.1);
 }
 .logo p {
   color: #777;
@@ -199,42 +202,58 @@ nav img {
   display: inline-block;
   vertical-align: middle;
 }
-.logo .app {
-  height: 100%;
-  overflow: auto;
+.logo .product_info {
+  width: 440px;
+  margin-top: 40px;
+  text-align: center;
 }
-.logo .app .demos > div {
-  width: 33%;
-}
-.logo .swiper-slide {
-  height: 415px;
-}
-.logo .swiper-pagination-bullet {
-  border-radius: 0;
-  padding: 5px;
+.logo .demos {
+  margin: 0 auto;
   display: inline-block;
-  opacity: 1;
-  background: none;
-  border: 2px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 400px;
+  height: 430px;
+  margin-left: 130px;
 }
-.logo .swiper-pagination-bullet:first-child {
-  display: none;
+.logo .demos h2 {
+  cursor: pointer;
+  user-select: none;
 }
-.logo .swiper-pagination-bullet:last-child {
-  width: auto;
-  height: auto;
+.logo .demos .demo {
+  width: 250px;
+  height: 420px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+  -webkit-transform-origin: 50% 80%;
+  -moz-transform-origin: 50% 80%;
+  -o-transform-origin: 80px 80%;
+  -ms-transform-origin: 50% 80%;
+  transform-origin: 50% 80%;
+  box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.2), 12px 12px 20px rgba(0, 0, 0, 0.4), 0px 0px 1px rgba(0, 0, 0, 0.1);
+  transform: rotate(0);
+  transition: all 700ms ease;
 }
-.logo .swiper-pagination-bullet:last-child:before {
-  content: "DEMO";
+.logo .demos #active {
+  z-index: 2;
 }
-.logo .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  color: #fff;
-  background: #007aff;
+.logo .demos .demo1 {
+  transform: rotate(-10deg);
+  left: -100px;
+}
+.logo .demos .demo2 {
+  left: 30px;
+}
+.logo .demos .demo3 {
+  transform: rotate(10deg);
+  left: 160px;
 }
 footer {
   padding: 20px 0 20px;
   border-top: 1px solid #ddd;
-  margin-top: 20px;
+  margin-top: 80px;
+  text-align: center;
 }
 .footer {
   max-width: 1050px;
@@ -245,6 +264,7 @@ footer {
   margin: 0;
   margin-bottom: 5px;
   font-size: 20px;
+  display: inline-block;
 }
 .footer h2:after {
   content: "";
