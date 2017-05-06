@@ -1,0 +1,298 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Angular2 Layer 弹层插件--灵活，简单，丰富，优美</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta itemprop="image" content="http://ng2-layer.wemakers.net/image/logo.png" />
+<meta itemprop="name" content="Angular2 Layer 弹层插件，灵活，简单，丰富，优美"/>
+<meta name="Keywords" content="Angular2 Layer,angular,angular2,dialog,alert,tip,message,loading,layer,弹窗插件,提示插件,弹出层"/>
+<meta name="Description" itemprop="description" content="angular2 layer是一款基于angular2开发的弹窗组件，致力于实现易用，美观，丰富的弹层效果，angular2 layer 符合angular2 组件化编程的模式，同时利用动态加载组件的方式，帮开发者简化了组件实现的过程，实现更灵活" />
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+<link rel="stylesheet" href="libs/prism/prism.css" />
+
+<link rel="stylesheet" href="css/index.css" />
+<link rel="stylesheet" href="css/doc.css" />
+<link rel="stylesheet" href="css/fonticon/style.css" />
+</head>
+<body>
+<header>
+<nav>
+	<a href="index.html" class="index"><img src="image/logo.png" alt="" /></a>
+	<a href="doc.html" class="icon-document">DOCUMENT</a>
+	<div href="https://github.com/1inus/angular2-layer" class="icon-downLoad"><span>DOWNLOAD</span>
+		<div class="download">
+			<a target="_blank" class="github" href="https://github.com/1inus/angular2-layer">github</a>
+			<a target="_blank" class="npm" href="https://www.npmjs.com/package/angular2-layer">npm</a>
+		</div>
+	</div>
+	<a href="demo.html" class="icon-document">DEMO</a>
+</nav>
+</header>
+
+<div class="body_content">
+	<div id="directory"></div>
+	<div id="docContent"><div id="preview" class="markdown-body"><p>rename to ng-tree!</p>
+
+<h1 id="screenshot">screenshot</h1>
+
+<p></p><center><img src="./screenshot.png" alt="screenshot"></center><p></p>
+
+<h1 id="classesapi">Classes &amp; Api</h1>
+
+<h2 id="ngtree">NgTree</h2>
+
+<p>ngTree component. useage : 
+<code class="lang-TypeScript">&lt;ngTree [treeData]="TreeData[]" [treeConfig]="TreeConfig"&gt;&lt;/ngTree&gt;</code></p>
+
+<h2 id="treedata">TreeData</h2>
+
+<p>data for creating tree</p>
+
+<ul>
+<li><code class="lang-TypeScript">name?:string</code>,tree node name</li>
+
+<li><code class="lang-TypeScript">isOpen?:boolean</code>,collapse or not(node has subtree)</li>
+
+<li><code class="lang-TypeScript">iconClass?:string|boolean</code>,a class selector add to icon element, false to disable node icon</li>
+
+<li><code class="lang-TypeScript">nameClass?:string</code>,a class selector add to name element</li>
+
+<li><code class="lang-TypeScript">children?:TreeData[]</code>,sub tree data</li>
+
+<li><code class="lang-TypeScript">isChecked?:boolean</code>,is checked</li>
+
+<li><code class="lang-TypeScript">tools?: {name:string, title?:string}[]</code>,customized edit button</li>
+</ul>
+
+<pre><code class="typescript language-typescript">export interface TreeData{
+    /**
+     * tree node name
+     */
+    name?:string;
+
+    /**
+     * collapse or not(node has subtree)
+     */
+    isOpen?:boolean;
+
+    /**
+     * a class selector add to icon element, false to disable node icon
+     */
+    iconClass?:string|boolean;
+
+    /**
+     * a class selector add to name element
+     */
+    nameClass?:string;
+
+    /**
+     * sub tree data
+     */
+    children?:TreeData[];
+
+    /**
+     * is checked
+     */
+    isChecked?:boolean;
+
+    /**
+     * customized edit button
+     */
+    tools?: {name:string, title?:string}[];
+}
+</code></pre>
+
+<h2 id="treeconfig">TreeConfig</h2>
+
+<ul>
+<li><code>onFold? : (node?:any) =&gt; boolean;</code>,execute before treenode collapse or uncollapse, returns false to disable the default action</li>
+
+<li><code>onClick? : (node?:any) =&gt; void;</code>,trigger on icon or name click</li>
+
+<li><code>onToolClick? : (node?:any, toolname?:string) =&gt; void;</code>trigger on tool button click</li>
+
+<li><code>dataFilter?: (nodeData?:any) =&gt; any</code>,format customized data to TreeData. effect on tree init</li>
+
+<li><code>tools?: {name:string, title?:string}[]</code>,customized edit button</li>
+
+<li><code>enableTools?:boolean</code>,enable toolbar or not</li>
+
+<li><code>dataMap?any</code>,format customized data to TreeData
+
+
+<ul>
+<li><code>dataMap.name?:string</code>,default to "name"</li>
+
+<li><code>dataMap.isOpen?:string</code>,deafult to 'isOpen'</li>
+
+<li><code>dataMap.iconClass?:string</code>,default to "iconClass"</li>
+
+<li><code>dataMap.nameClass?:string</code>,default to "nameClass"</li>
+
+<li><code>dataMap.children?:string</code>,default to "children"</li>
+
+<li><code>dataMap.isChecked?:string</code>,default to "isChecked"</li>
+
+<li><code>dataMap.tools?:string</code>,default to "tools"</li>
+
+<li><code>dataMap.enableTools? : string</code>,default to "enableTools"</li></ul>
+</li>
+</ul>
+
+<pre><code class="typescript language-typescript">export interface TreeConfig {
+    /**
+     * execute before treenode collapse or uncollapse, returns false to disable the default action
+     * @param node
+     */
+    onFold? : (node?:any) =&gt; boolean;
+
+    /**
+     * trigger on icon or name click
+     * @param node
+     */
+    onClick? : (node?:any) =&gt; void;
+
+    /**
+     * trigger on tool button click
+     * @param node
+     * @param toolName
+     */
+    onToolClick? : (node?:any, toolName?:string) =&gt; void;
+
+    /**
+     * format customized data to TreeData. effect on tree init
+     * @param nodeData
+     */
+    dataFilter?: (nodeData?:any) =&gt; any;
+
+    /**
+     *
+     */
+    tools?: {name:string, title?:string}[];
+
+    /**
+     * enable toolbar or not
+     */
+    enableTools?: boolean;
+
+    /**
+     * format customized data to TreeData
+     */
+    dataMap? : {
+        /**
+         * default to "name"
+         */
+        name?:string;
+
+        /**
+         * deafult to 'isOpen'
+         */
+        isOpen?:string;
+
+        /**
+         * default to "iconClass"
+         */
+        iconClass?:string;
+
+        /**
+         * default to "nameClass"
+         */
+        nameClass?:string;
+
+        /**
+         * default to "children"
+         */
+        children?:string;
+
+        /**
+         * default to "isChecked"
+         */
+        isChecked?:string;
+
+        /**
+         *
+         */
+        tools?: string;
+
+        enableTools? : string;
+    }
+}
+</code></pre>
+
+<h1 id="usagedemo">Usage &amp; demo</h1>
+
+<p>talk is cheape, show you my code</p>
+
+<h2 id="step1">step 1</h2>
+
+<p>import css</p>
+
+<pre><code class="html language-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">link</span> <span class="hljs-attribute">rel</span>=<span class="hljs-value">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"../node_modules/ng-tree/style/tree.css"</span>&gt;</span>
+</code></pre>
+
+<h2 id="step2">step 2</h2>
+
+<p>use it</p>
+
+<pre><code class="TypeScript language-TypeScript">import {Component, NgModule} from '@angular/core';
+import {BrowserModule} from "@angular/platform-browser";
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
+import {NgTree} from "../ngTree";
+
+@Component({
+    selector: 'app',
+    template: `&lt;ngTree [treeData]="treeData" [treeConfig]="treeConfig"&gt;&lt;/ngTree&gt;`
+})
+export class App {
+    public treeData: any[] = [{
+        name: "folder",
+        isOpen:true,
+        iconSelector:"computer",
+        nameSelector:"warning",
+        nodes: [{
+            name: 'file'
+        }]
+    },{
+        name: 'another folder',
+        nodes:[{
+            name: 'another file'
+        }]
+    }];
+
+    public treeConfig : any = {
+        dataMap:{
+            children:"nodes"
+        }
+    }
+}
+
+@NgModule({
+    imports: [BrowserModule],
+    entryComponents:[NgTree],
+    declarations: [NgTree, App],
+    bootstrap: [App]
+})
+export class AppModule {}
+platformBrowserDynamic().bootstrapModule(AppModule);
+</code></pre></div></div>
+</div>
+<script src="libs/prism/prism.js"></script>
+<script src="libs/jquery-3.1.1.min.js"></script>
+<script src="libs/toc.min.js"></script>
+<script></script>
+<script>
+var code = document.querySelectorAll('code');
+for(var i in code){Prism.highlightElement(code[i]);}
+$('#directory').toc({
+	'selectors': 'h1,h2,h3',
+	'container': 'body',
+	'smoothScrolling': true,
+	'prefix': 'toc',
+	'onHighlight': function(el) {},
+	'highlightOnScroll': true,
+	'highlightOffset': 0
+});
+</script>
+</body>
+</html>
