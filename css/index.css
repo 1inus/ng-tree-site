@@ -213,7 +213,8 @@ nav img {
   position: relative;
   width: 400px;
   height: 430px;
-  margin-left: 130px;
+  margin-left: 160px;
+  margin-top: 20px;
 }
 .logo .demos h2 {
   cursor: pointer;
