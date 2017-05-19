@@ -1,0 +1,52 @@
+[class^='icon_'], [class*=' icon_'] {
+	line-height:1em;
+
+}
+[class^='icon_']:before, [class*=' icon_']:before {
+	background-image:url(images/icons.svg);
+}
+.iconing_png [class^='icon_']:before, .iconing_png [class*=' icon_']:before {
+	background-image:url(images/icons.png);
+}
+[class^='icon_']:before, [class*=' icon_']:before {
+	content:'♥';
+	width:1em;
+	height:1em;
+	line-height:1em;
+	display:inline-block;
+	color:transparent;
+	background-repeat: no-repeat;
+	background-size:900% 200%;
+	background-position:1em 1em;
+}
+
+.icon_computer:before{
+	background-position:0 0;
+}
+.icon_cloud:before{
+	background-position:12.5% 0;
+}
+.icon_folder_lock:before{
+	background-position:25% 0;
+}
+.icon_photo:before{
+	background-position:37.5% 0;
+}
+.icon_document:before{
+	background-position:50% 0;
+}
+.icon_sunny:before{
+	background-position:62.5% 0;
+}
+.icon_iconing11022:before{
+	background-position:75% 0;
+}
+.icon_iconing11021:before{
+	background-position:87.5% 0;
+}
+.icon_iconing11019:before{
+	background-position:100% 0;
+}
+.icon_iconing11020:before{
+	background-position:0 100%;
+}

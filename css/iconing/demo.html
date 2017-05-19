@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<title>iconing 图标demo</title>
+<link rel='stylesheet' href='style.css' />
+<link rel='stylesheet' href='demo.css' />
+<style id='freshstyle'></style>
+</head>
+<body>
+<header>
+	<div class='headerwraper header'>
+		<div class='headerleft'>
+			<h1 class='logo'>iconing</h1>
+		</div>
+		<div class='headerright'></div>
+	</div>
+</header>
+<div class='maincontent'>
+	<div class='iconsheader header'>
+		<h2>SVG彩色动画图标(共5个图标)</h2>
+		<div class='operation'>
+			<label><input type='radio' name='bgType' onclick='bgType(this)' checked='checked' value='svg'/><span>svg</span></label>
+			<label><input type='radio' name='bgType' onclick='bgType(this)' value='png'/><span>png</span></label>&nbsp;&nbsp;&nbsp;
+			<span>尺寸 : </span>
+			<input max='198' min='14' value='30' type='range' oninput='fontSize(this);' onchange='fontSize(this);'/>
+			<span id='fontsize'>30</span><soan>px</soan>
+			<div class='colors' onclick='bgCol(event)'>
+					<i style='background:#fff;'></i>
+				<i style='background:#ECF0F1;'></i>
+				<i style='background:#2980B9;'></i>
+				<i style='background:#27AE60;'></i>
+			</div>
+		</div>
+	</div>
+	<ul>
+		<li><div class='iconwraper'><div class='icon icon_computer'>computer</div><div class='selector'>icon_computer</div></div></li>
+		<li><div class='iconwraper'><div class='icon icon_cloud'>cloud</div><div class='selector'>icon_cloud</div></div></li>
+		<li><div class='iconwraper'><div class='icon icon_folder_lock'>folder_lock</div><div class='selector'>icon_folder_lock</div></div></li>
+		<li><div class='iconwraper'><div class='icon icon_photo'>photo</div><div class='selector'>icon_photo</div></div></li>
+		<li><div class='iconwraper'><div class='icon icon_document'>document</div><div class='selector'>icon_document</div></div></li>
+		<li><div class='iconwraper'><div class='icon icon_sunny'>sunny</div><div class='selector'>icon_sunny</div></div></li>
+		<li><div class='iconwraper'><div class='icon icon_iconing11022'>霾-1</div><div class='selector'>icon_iconing11022</div></div></li>
+		<li><div class='iconwraper'><div class='icon icon_iconing11021'>多云</div><div class='selector'>icon_iconing11021</div></div></li>
+		<li><div class='iconwraper'><div class='icon icon_iconing11019'>图片</div><div class='selector'>icon_iconing11019</div></div></li>
+		<li><div class='iconwraper'><div class='icon icon_iconing11020'>删除（hover）</div><div class='selector'>icon_iconing11020</div></div></li>
+</ul>
+</div>
+<script>
+var icons = document.querySelectorAll('.icon'),
+	fontsize = document.getElementById('fontsize'),
+	sty = document.getElementById('freshstyle');
+function bgCol(e){
+	sty.innerHTML = '.icon:before{background-color:'+e.target.style.background+'}';
+}
+function fontSize(tz){
+	var icon;
+	for(var i=0;i<icons.length; i++){
+		icon = icons[i];
+		icon.style.fontSize = tz.value+'px';
+		fontsize.innerHTML = tz.value;
+	}
+}
+function fn(e){
+	if(e.target.classList.contains('selector')){
+		var rng=document.createRange();
+		rng.selectNode(e.target);
+		getSelection().addRange(rng);
+	}
+}
+addEventListener('click', fn, false);
+function bgType(inp){
+	document.querySelector('html').className='iconing_'+inp.value;
+}
+</script>
+</body>
+</html>
