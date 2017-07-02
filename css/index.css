@@ -30,7 +30,7 @@ code {
 }
 nav {
   margin: 0 auto;
-  max-width: 1050px;
+  max-width: 1200px;
 }
 img {
   border: none;
@@ -57,7 +57,7 @@ button {
   background: none;
   border-style: solid;
   border-width: 1px;
-  background: linear-gradient(#fafafa, #f2f2f2);
+  background: linear-gradient(#FAFAFA, #F2F2F2);
   outline: none;
 }
 button:hover {
@@ -69,7 +69,7 @@ button[disabled] {
 .features {
   font-size: 0;
   padding: 30px 0;
-  max-width: 1050px;
+  max-width: 1200px;
   margin: 0 auto;
   background: rgba(250, 250, 250, 0.55);
 }
@@ -175,7 +175,7 @@ nav img {
   line-height: 1em;
   margin: 20px auto;
   color: #000;
-  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 10px 6px rgba(0, 0, 0, 0.2), 0 20px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 10px 6px rgba(0, 0, 0, 0.2), 0 20px 10px rgba(0, 0, 0, 0.1);
 }
 .logo p {
   color: #777;
@@ -221,34 +221,22 @@ nav img {
   user-select: none;
 }
 .logo .demos .demo {
-  width: 250px;
-  height: 420px;
+  width: 320px;
+  height: 400px;
   overflow: hidden;
   background: #fff;
-  border-radius: 5px;
-  position: absolute;
+  padding: 30px 15px;
   -webkit-transform-origin: 50% 80%;
   -moz-transform-origin: 50% 80%;
   -o-transform-origin: 80px 80%;
   -ms-transform-origin: 50% 80%;
   transform-origin: 50% 80%;
-  box-shadow: -1px -1px 3px rgba(0, 0, 0, 0.2), 12px 12px 20px rgba(0, 0, 0, 0.4), 0px 0px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   transform: rotate(0);
   transition: all 700ms ease;
 }
 .logo .demos #active {
   z-index: 2;
-}
-.logo .demos .demo1 {
-  transform: rotate(-10deg);
-  left: -100px;
-}
-.logo .demos .demo2 {
-  left: 30px;
-}
-.logo .demos .demo3 {
-  transform: rotate(10deg);
-  left: 160px;
 }
 footer {
   padding: 20px 0 20px;
@@ -257,7 +245,7 @@ footer {
   text-align: center;
 }
 .footer {
-  max-width: 1050px;
+  max-width: 1200px;
   margin: 0 auto;
   font-size: 0;
 }

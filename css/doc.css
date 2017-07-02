@@ -64,6 +64,10 @@ header {
   margin-left: 240px;
   padding: 20px;
 }
+#docContent img {
+  display: block;
+  margin: 10px auto;
+}
 #docContent ul {
   padding: 0;
   list-style: none;
@@ -115,7 +119,7 @@ p {
 .body_content {
   font-family: -apple-system, "Helvetica Neue", Arial, "PingFang SC", "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei";
   padding-top: 20px;
-  max-width: 1050px;
+  max-width: 1200px;
   background: none;
   margin: 0 auto;
   color: #000;
